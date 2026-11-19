@@ -121,6 +121,10 @@ const DEFAULT_2FA: TwoFactorState = {
   statusError: null,
 };
 
+const DISABLE_2FA_GATE_IN_LOCAL_DEV =
+  import.meta.env.DEV &&
+  String(import.meta.env.VITE_DISABLE_2FA_GATE ?? "").toLowerCase() === "true";
+
 interface AuthContextValue {
   session: Session | null;
   userId: string | null;
@@ -372,6 +376,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const shouldBlockForTwoFactor =
     Boolean(session) &&
+    !DISABLE_2FA_GATE_IN_LOCAL_DEV &&
     twoFactor.checked &&
     twoFactor.enabled &&
     twoFactor.requiresVerification &&

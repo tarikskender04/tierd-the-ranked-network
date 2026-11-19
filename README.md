@@ -85,3 +85,8 @@ Run Supabase migrations from `supabase/` in order (`001` -> `035`).
 If feed/search/storage is misconfigured, follow: [docs/EXPLORE_SETUP.md](docs/EXPLORE_SETUP.md)
 
 You can also check out all the screenshots of the application: [docs/screenshots](docs/screenshots/)
+
+## Engineering TODOs
+
+- [React architecture refactor](docs/REACT_ARCHITECTURE_TODO.md)
+- [Email 2FA security plan](docs/TWO_FACTOR_SECURITY_TODO.md)

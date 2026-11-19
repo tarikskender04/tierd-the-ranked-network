@@ -79,7 +79,7 @@ const Explore = () => {
         )}
 
         {!showSearchResults && (
-          <div className="grid lg:grid-cols-[280px_1fr_280px] gap-6 items-start">
+          <div className="grid gap-5 items-start lg:grid-cols-[240px_minmax(0,1fr)_240px] xl:grid-cols-[250px_minmax(0,1fr)_250px] xl:gap-6">
             <ExploreLeftSidebar
               userId={userId}
               authLoading={authLoading}
